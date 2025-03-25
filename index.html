@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        /* General Page Styling */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url("Desktop - 11.png") no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main Container */
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Signup Form Styling */
+        .signup-form {
+            background-color: rgba(223, 244, 212, 0.9);
+            /* Light green transparent */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+
+        /* Form Elements */
+        .signup-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .signup-form label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .otp-container {
+            display: flex;
+            gap: 5px;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background-color: #45a049;
+        }
+
+        .otp-container button {
+            padding: 10px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .otp-container button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container" style="margin-right: 434px;">
+        <div class="signup-form">
+            <h2>CREATE ACCOUNT</h2>
+            <form id="signupForm" onsubmit="return handleAccountCreation(event)">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="otp">OTP</label>
+                <div class="otp-container">
+                    <input type="text" id="otp" placeholder="Enter OTP" required>
+                    <button type="button" onclick="getOTP()">Get OTP</button>
+                </div>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // This function will be triggered when the user submits the form
+        function handleAccountCreation(event) {
+            event.preventDefault();  // Prevents the form from submitting the traditional way
+
+            // Show a success message
+            alert("Account successfully created!");
+
+            // Redirect the user to the FarmConnect page
+            window.location.href = "https://krishna9-31.github.io/farmconnect/";
+        }
+
+        // Function to simulate OTP request (could be extended for real OTP generation)
+        function getOTP() {
+            alert("OTP sent to your phone number!");
+        }
+    </script>
+</body>
+
+</html>
